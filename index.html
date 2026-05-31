@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Store - Giày Thể Thao Chính Hãng</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar container">
+            <div class="logo" onclick="homePage()" style="cursor: pointer;">
+                <h2>Sport<span>Shoes</span></h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active" onclick="homePage()">Trang Chủ</a></li>
+                    <li><a href="#products-section" onclick="homePage()">Sản Phẩm</a></li>
+                    <li><a href="#" onclick="contactPage()">Liên Hệ</a></li> 
+                    <li><a href="LAB_thuchanh.html">Lab Thực Hành</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon-wrapper" onclick="toggleCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <div id="home-page">
+        <section class="hero">
+            <div class="hero-content container">
+                <h1>Bước Đi Phong Cách <br>Nâng Tầm Trải Nghiệm</h1>
+                <p>Khám phá bộ sưu tập giày thể thao mới nhất năm 2026 với ưu đãi cực khủng.</p>
+                <a href="#products-section" class="btn">Mua Ngay Lập Tức</a>
+            </div>
+        </section>
+
+        <section id="products-section" class="products container">
+            <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
+            
+            <div class="product-grid">
+                <div class="product-card" onclick="openProductDetail('Nike Air Max Red', 2500000, ['img/s-l400.webp','img/s-l400 2.webp','img/s-l400 3.webp','img/s-l960.webp'], 'Dòng giày thể thao huyền thoại mang lại sự êm ái tối đa cho bàn chân cùng đệm khí Air cá tính.')">
+                    <div class="product-img">
+                        <img src="img/s-l400.webp" alt="Giày Nike Air Max">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nike Air Max Red</h3>
+                        <p class="price">2,500,000 đ</p>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductDetail('Nike Zoom Neon', 2900000, ['img/nike-zoom-type-volt-CV2220-700-4.webp','img/nike-zoom-type-volt-CV2220-700-1.webp','img/nike-zoom-type-volt-CV2220-700-5.webp','img/nike-zoom-type-volt-CV2220-700-8.webp'], 'Thiết kế khí động học hỗ trợ bứt tốc đường chạy. Phối màu Neon nổi bật mọi góc nhìn.')">
+                    <div class="product-img">
+                        <img src="img/nike-zoom-type-volt-CV2220-700-4.webp" alt="Giày Nike Lime">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nike Zoom Neon</h3>
+                        <p class="price">2,900,000 đ</p>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductDetail('Adidas Pastel Pink', 1850000, ['img/s-l1600.webp','img/s-l1600 2.webp','img/s-l1600 3.webp','img/s-l1600 4.webp'], 'Phối màu hồng pastel nhẹ nhàng thanh lịch, chất liệu thoáng khí phù hợp cho mọi hoạt động hằng ngày.')">
+                    <div class="product-img">
+                        <img src="img/s-l1600.webp" alt="Giày Sneaker Pink">
+                    </div>
+                    <div class="product-info">
+                        <h3>Adidas Pastel Pink</h3>
+                        <p class="price">1,850,000 đ</p>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductDetail('Puma Classic White', 1600000, ['img/16000701_o.jpg','img/16000701_o_a1.jpg','img/16000701_o_a2.jpg','img/16000701_o_a4.jpg'], 'Vẻ đẹp tối giản đầy tinh tế với chất da trắng cao cấp, dễ phối với bất kỳ phong cách trang phục nào.')">
+                    <div class="product-img">
+                        <img src="img/16000701_o.jpg" alt="Giày Puma White">
+                    </div>
+                    <div class="product-info">
+                        <h3>Puma Classic White</h3>
+                        <p class="price">1,600,000 đ</p>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductDetail('Nike Blue ver', 1800000, ['img/1.webp','img/2.webp','img/3.webp','img/4.webp','img/5.webp'], 'Sự pha trộn sắc sảo giữa màu xanh Photo Blue và ánh bạc thời thượng, tạo điểm nhấn cá tính đột phá.')">
+                    <div class="product-img">
+                        <img src="img/1.webp" alt="Giày Nike Blue">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nike Blue ver</h3>
+                        <p class="price">1,800,000 đ</p>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductDetail('Adidas Black', 1500000, 'img/61AUAc8yMWL.webp', 'Tông đen mạnh mẽ cá tính, đế giày bám đường tốt và bộ đệm êm ái cho ngày dài năng động.')">
+                    <div class="product-img">
+                        <img src="img/61AUAc8yMWL.webp" alt="Giày Adidas Black">
+                    </div>
+                    <div class="product-info">
+                        <h3>Adidas Black</h3>
+                        <p class="price">1,500,000 đ</p>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductDetail('Puma RS-X Neon Pulse', 2100000, ['img/puma-all-pro-nitro-2-ext-pro.webp','img/puma-all-pro-nitro-2-ext-pro 2.webp'], 'Thiết kế hầm hố theo xu hướng Chunky hiện đại kết hợp đường nét phản quang ấn tượng.')">
+                    <div class="product-img">
+                        <img src="img/puma-all-pro-nitro-2-ext-pro.webp" alt="Giày Puma RS-X Neon Pulse">
+                    </div>
+                    <div class="product-info">
+                        <h3>Puma RS-X Neon Pulse</h3>
+                        <p class="price">2,100,000 đ</p>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductDetail('New Balance 550 Grey', 2560000, ['img/bbw550bb_nb_02_i.webp','img/bbw550bb_nb_03_i.webp','img/bbw550bb_nb_04_i.webp','img/bbw550bb_nb_05_i.webp','img/bbw550bb_nb_06_i.webp','img/bbw550bb_nb_07_i.webp'], 'Mẫu sneaker mang hơi hướng vintage cổ điển, ôm chân vừa vặn, bền bỉ cùng năm tháng.')">
+                    <div class="product-img">
+                        <img src="img/bbw550bb_nb_02_i.webp" alt="Giày New Balance 550 Grey">
+                    </div>
+                    <div class="product-info">
+                        <h3>New Balance 550 Grey</h3>
+                        <p class="price">2,560,000 đ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="detail-page" class="container detail-container style-hidden">
+        <button class="back-btn" onclick="homePage()"><i class="fa-solid fa-arrow-left"></i> Quay lại trang chủ</button>
+        
+        <div class="detail-box">
+            <div class="detail-img-side">
+                <img id="detail-img" src="" alt="Ảnh sản phẩm">
+                <div id="detail-thumbnails" class="thumbnail-container"></div>
+            </div>
+            <div class="detail-info-side">
+                <h1 id="detail-title">Tên sản phẩm</h1>
+                <p id="detail-price" class="detail-price-text">0 đ</p>
+                
+                <div class="detail-description">
+                    <h3>Mô tả sản phẩm:</h3>
+                    <p id="detail-desc">Nội dung mô tả...</p>
+                </div>
+
+                <div class="size-section">
+                    <h3>Chọn Kích Cỡ (Size):</h3>
+                    <div class="size-sizes">
+                        <span class="size-btn" onclick="selectSize(this)">35</span>
+                        <span class="size-btn" onclick="selectSize(this)">36</span>
+                        <span class="size-btn" onclick="selectSize(this)">37</span>
+                        <span class="size-btn" onclick="selectSize(this)">38</span>
+                        <span class="size-btn" onclick="selectSize(this)">39</span>
+                        <span class="size-btn" onclick="selectSize(this)">40</span>
+                        <span class="size-btn" onclick="selectSize(this)">41</span>
+                        <span class="size-btn" onclick="selectSize(this)">42</span>
+                        <span class="size-btn" onclick="selectSize(this)">43</span>
+                        <span class="size-btn" onclick="selectSize(this)">44</span>
+                </div>
+                </div>
+                <button id="detail-add-btn" class="buy-now-btn">THÊM VÀO GIỎ HÀNG</button>
+            </div>
+        </div>
+    </div>
+    <div id="contact-page" class="container contact-container style-hidden">
+    
+    <div class="contact-header-section">
+        <h1 class="bg-text">CONTACT</h1>
+        <h2 class="main-text">LIÊN HỆ</h2>
+        <p class="sub-text">Chúng tôi luôn sẵn sàng lắng nghe bạn</p>
+    </div>
+
+    <div class="contact-content">
+        <div class="contact-info-side">
+            <h2>Thông tin</h2>
+            <p class="info-title-sub">KẾT NỐI VỚI CHÚNG TÔI</p>
+
+            <div class="info-item-box">
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="info-text">
+                        <h3>Địa chỉ</h3>
+                        <p>129 Đường Tôn Đức Thắng, Quận 1<br>TP. Hồ Chí Minh, Việt Nam</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="info-text">
+                        <h3>Hotline</h3>
+                        <p class="highlight">0123 456 789</p>
+                        <p class="time-detail">Thứ 2 - Chủ nhật: 10:00 - 22:00</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="info-text">
+                        <h3>Email</h3>
+                        <p>SportShoes@gmail.com</p>
+                        <p class="time-detail">Phản hồi trong vòng 24 giờ</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="info-text">
+                        <h3>Giờ mở cửa</h3>
+                        <p>Thứ 2 - Thứ 6: 8:00 - 22:00</p>
+                        <p>Thứ 7 - Chủ nhật: 10:00 - 20:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-side">
+            <h2>Gửi tin nhắn</h2>
+            <p class="info-title-sub">CHÚNG TÔI SẼ LIÊN HỆ LẠI SỚM NHẤT</p>
+
+            <form onsubmit="handleSendContact(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>HỌ VÀ TÊN</label>
+                        <input type="text" placeholder="Trần Minh A" required>
+                    </div>
+                    <div class="form-group">
+                        <label>SỐ ĐIỆN THOẠI</label>
+                        <input type="tel" placeholder="0123 456 789" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>EMAIL</label>
+                    <input type="email" placeholder="emailcuakhachhang@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>CHỦ ĐỀ</label>
+                    <select required>
+                        <option value="" disabled selected>— Chọn chủ đề —</option>
+                        <option value="1">Tư vấn chọn size giày</option>
+                        <option value="2">Khiếu nại/Bảo hành</option>
+                        <option value="3">Hợp tác kinh doanh</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>NỘI DUNG</label>
+                    <textarea rows="5" placeholder="Nhập nội dung bạn muốn gửi..." required></textarea>
+                </div>
+
+                <button type="submit" class="send-msg-btn">Gửi tin nhắn</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Giỏ Hàng Của Bạn</h3>
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p class="empty-msg">Giỏ hàng đang trống.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">Tổng cộng: <span id="cart-total">0 đ</span></div>
+            <button class="checkout-btn" onclick="checkout()">Thanh Toán</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SportShoes.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
